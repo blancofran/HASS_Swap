@@ -1,0 +1,8 @@
+init_commands:
+  - >-
+    if [ ! -f /backup/_swap.swap ]; then fallocate -l 2G /backup/_swap.swap &&
+    mkswap /backup/_swap.swap && chmod 0600 /backup/_swap.swap && swapon
+    /backup/_swap.swap && echo SWAP_NEW_FILE_CREATED_USED ; elif [[ !
+    $(dmesg|grep _swap.swap) = *swap\ on* ]] ; then swapon /backup/_swap.swap &&
+    echo SWAP_USING_OLD_FILE ; else swapoff /backup/_swap.swap && swapon
+    /backup/_swap.swap && echo SWAP_FINAL_ELSE_STATEMENT ; fi
