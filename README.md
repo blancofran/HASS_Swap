@@ -191,12 +191,6 @@ Si la SWAP se utiliza constantemente, puede ser una señal de que el sistema nec
 
 ---
 
-## Flujo General
-
-text Inicio    │    ▼ ¿Existe /backup/_swap.swap?    │  ┌─┴───────────────┐  │                 │  No               Sí  │                 │  ▼                 ▼ Crear SWAP     ¿Está activa?  │                 │  ▼            ┌────┴────┐ Activar       │         │ SWAP         No        Sí  │            │         │  ▼            ▼         ▼ Fin      Activar    Reiniciar           SWAP        SWAP             │           │             └─────┬─────┘                   ▼                  Fin 
-
----
-
 ## Licencia
 
 Uso libre para proyectos personales, educativos y de automatización.
